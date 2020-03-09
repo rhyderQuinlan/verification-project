@@ -492,9 +492,9 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
 
-        assertEquals(new BigDecimal("15.00"), rate.calculate(new Period(9,10)));
+        assertEquals(new BigDecimal("17.3750"), rate.calculate(new Period(9,10)));
     }
 
     //test 25
@@ -516,7 +516,7 @@ public class QuinlanRhyderTestTask3 {
 
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal("20.00"), rate.calculate(new Period(9,10)));
+        assertEquals(new BigDecimal("23.6250"), rate.calculate(new Period(9,10)));
     }
 
     //test 26
@@ -537,7 +537,7 @@ public class QuinlanRhyderTestTask3 {
 
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal("150.00"), rate.calculate(new Period(10, 20)));
+        assertEquals(new BigDecimal("248.6250"), rate.calculate(new Period(10, 20)));
     }
 
     //test 27
@@ -559,7 +559,7 @@ public class QuinlanRhyderTestTask3 {
 
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal("75.00"), rate.calculate(new Period(10,20)));
+        assertEquals(new BigDecimal("248.6250"), rate.calculate(new Period(10,20)));
     }
     //calculate method end ^^^
 
@@ -567,7 +567,7 @@ public class QuinlanRhyderTestTask3 {
     //------------------------------------------- New tests begin here ----------------------------------------------
     //-------------------------------------------      Task 2          ----------------------------------------------
     //---------------------------------------------------------------------------------------------------------------
-    //branch coverage
+
     @Test(expected = IllegalArgumentException.class)
     public void test28()  {
         CarParkKind kind = CarParkKind.STAFF;
@@ -648,5 +648,243 @@ public class QuinlanRhyderTestTask3 {
     //-------------------------------------------      Task 3          ----------------------------------------------
     //---------------------------------------------------------------------------------------------------------------
 
+    //kind = visitor
+    //calculation < 8.00
+    //amount should be free
+    @Test
+    public void test32(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.VISITOR;
 
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(2);
+        BigDecimal reducedRate = new BigDecimal(1);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        assertEquals(new BigDecimal(0), rate.calculate(new Period(11,12)));
+    }
+
+    //kind = visitor
+    //calculation == 8.00
+    //amount should be 0.00
+    @Test
+    public void test33(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.VISITOR;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(9);
+        BigDecimal reducedRate = new BigDecimal(8);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        assertEquals(new BigDecimal(0), rate.calculate(new Period(11,12)));
+    }
+
+    //kind = visitor
+    //calculation > 8.00
+    //amount greater than 8.00 means return 50% of amount greater than 8.00
+    @Test
+    public void test34(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.VISITOR;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(3);
+        BigDecimal reducedRate = new BigDecimal(2);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+        assertEquals(new BigDecimal("5.000"), rate.calculate(new Period(9,17)));
+    }
+
+    //kind = management
+    //calculation < 3.00
+    //return minimum payable of 3.00
+    @Test
+    public void test35(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.MANAGEMENT;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(2);
+        BigDecimal reducedRate = new BigDecimal(1);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+        assertEquals(new BigDecimal("3.00"), rate.calculate(new Period(17,18)));
+    }
+
+    //kind = management
+    //calculation > 3.00
+    //return calculation
+    @Test
+    public void test36(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.MANAGEMENT;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(2);
+        BigDecimal reducedRate = new BigDecimal(1);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+        assertEquals(new BigDecimal(10), rate.calculate(new Period(12,18)));
+    }
+
+    //kind = student
+    //calculation > 5.50
+    //amount above 5.50 receives 25% reduction
+    @Test
+    public void test37(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.STUDENT;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(2);
+        BigDecimal reducedRate = new BigDecimal(1);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+
+        assertEquals(new BigDecimal("6.1250"), rate.calculate(new Period(15,18)));
+    }
+
+    //kind = student
+    //calculation < 5.50
+    //amount < 5.50 so does not receive 25% reduction
+    @Test
+    public void test38(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.STUDENT;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(2);
+        BigDecimal reducedRate = new BigDecimal(1);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+        assertEquals(new BigDecimal(2), rate.calculate(new Period(17,18)));
+    }
+
+    //kind = staff
+    //amount is > 16 and so return maximum payable of 16.00
+    @Test
+    public void test39(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.STAFF;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(3);
+        BigDecimal reducedRate = new BigDecimal(2);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+        assertEquals(new BigDecimal("16.00"), rate.calculate(new Period(9,18)));
+    }
+
+    //kind = staff
+    //amount is < 16 and so return amount
+    @Test
+    public void test40(){
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        CarParkKind kind = CarParkKind.STAFF;
+
+        Period normalPeriod = new Period(9, 12);
+        Period reducedPeriod = new Period(13, 18);
+
+        normalPeriods.add(normalPeriod);
+        reducedPeriods.add(reducedPeriod);
+        BigDecimal normalRate = new BigDecimal(3);
+        BigDecimal reducedRate = new BigDecimal(2);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+
+        if(rate.calculate(new Period(15,18)).compareTo(new BigDecimal("16.00")) == 1){
+            throw new IllegalArgumentException(); //period calculation is not less than or equal to 16 so throw exception
+        }
+    }
+
+    //---------------------------------------------------------------------------------------------------------------
+    //------------------------------------------- Mistakes made in task 2 -------------------------------------------
+    //--------------------------------------- To achieve 100 % branch coverage --------------------------------------
+    //---------------------------------------------------------------------------------------------------------------
+
+    //normalperiods == null
+    @Test(expected = IllegalArgumentException.class)
+    public void test41()  {
+        CarParkKind kind = CarParkKind.STAFF;
+        BigDecimal normalRate = new BigDecimal("20");
+        BigDecimal reducedRate = new BigDecimal("15");
+
+        ArrayList<Period> normalPeriods = null;
+
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        Period reducedPeriod = new Period(14,19);
+        reducedPeriods.add(reducedPeriod);
+
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+    }
+
+    //!isValidPeriods(normalPeriod) returns false
+    @Test(expected = IllegalArgumentException.class)
+    public void test42()  {
+        CarParkKind kind = CarParkKind.STAFF;
+        BigDecimal normalRate = new BigDecimal("20");
+        BigDecimal reducedRate = new BigDecimal("15");
+
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        Period normalPeriod1 = new Period(9,13);
+        normalPeriods.add(normalPeriod1);
+        Period normalPeriod2 = new Period(12,17);
+        normalPeriods.add(normalPeriod2);
+
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        Period reducedPeriod = new Period(14,19);
+        reducedPeriods.add(reducedPeriod);
+        Period reducedPeriod2 = new Period(20,21);
+        reducedPeriods.add(reducedPeriod2);
+
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+    }
 }

@@ -89,38 +89,32 @@ public class Rate {
         }
         return isValid;
     }
+
     public BigDecimal calculate(Period periodStay) {
         int normalRateHours = periodStay.occurences(normal);
         int reducedRateHours = periodStay.occurences(reduced);
 
         BigDecimal calculation = this.hourlyNormalRate.multiply(BigDecimal.valueOf(normalRateHours)).add(this.hourlyReducedRate.multiply(BigDecimal.valueOf(reducedRateHours)));
 
-        if(this.kind.equals(CarParkKind.VISITOR)){
-            if (calculation.compareTo(new BigDecimal("8.00")) == 1){
+        if(this.kind.equals(CarParkKind.MANAGEMENT)){
+            if (calculation.compareTo(new BigDecimal(("3.00"))) == -1){
+                return new BigDecimal("3.00"); //calculation is less than 3.00 so return minimum payable (3.00)
+            }
+        } else if(this.kind.equals(CarParkKind.STUDENT)){
+            if (calculation.compareTo(new BigDecimal(("5.50"))) == 1){
+                return calculation.add(calculation.subtract(new BigDecimal("5.50")).multiply(new BigDecimal("0.25"))); //calculation is greater than 5.50 so give 25% amount greater than 5.50
+            }
+        } else if(this.kind.equals(CarParkKind.STAFF) && calculation.compareTo(new BigDecimal("16.00")) == 1){
+            return new BigDecimal("16.00"); //calculation is greater than 16.00, max amount payable is 16.00 so return 16.00;
+        } else if (this.kind.equals(CarParkKind.VISITOR)){
+            if (calculation.compareTo(new BigDecimal("8.00")) == -1 || calculation.compareTo(new BigDecimal("8.00")) == 0){
                 return new BigDecimal((0)); //less then 8.00 return free (0)
             } else {
                 return calculation.subtract(new BigDecimal("8.00")).multiply(new BigDecimal("0.5")); //subtract 8.00 and multiply by 50%
             }
         }
 
-        if(this.kind.equals(CarParkKind.MANAGEMENT)){
-            if (calculation.compareTo(new BigDecimal(("3.00"))) == -1){
-                return new BigDecimal("3.00"); //calculation is less than 3.00 so return minimum payable (3.00)
-            }
-        }
-
-        if(this.kind.equals(CarParkKind.STUDENT)){
-            if (calculation.compareTo(new BigDecimal(("5.50"))) == 1){
-                return calculation.add(calculation.subtract(new BigDecimal("5.50")).multiply(new BigDecimal("0.25"))); //calculation is greater than 5.50 so give 25% amount greater than 5.50
-            }
-        }
-
-        if(this.kind.equals(CarParkKind.STAFF)){
-            if(calculation.compareTo((new BigDecimal("16.00"))) == 1){
-                return new BigDecimal("16.00"); //calculation is greater than 16.00, max amount payable is 16.00 so return 16.00
-            }
-        }
-
+        return calculation;
     }
 
 }
