@@ -23,7 +23,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 2
@@ -43,7 +43,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 3
@@ -63,7 +63,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 4
@@ -83,7 +83,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 5
@@ -103,7 +103,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 6
@@ -123,7 +123,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 7
@@ -143,7 +143,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(12,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 8
@@ -163,7 +163,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 9
@@ -183,7 +183,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(12,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 10
@@ -203,7 +203,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 11
@@ -223,7 +223,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(12,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 12
@@ -243,7 +243,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 13
@@ -264,7 +264,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(12,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 14
@@ -285,7 +285,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 15
@@ -306,7 +306,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(12,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 16
@@ -327,7 +327,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 17
@@ -349,7 +349,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod2 = new Period(17,21);
         normalPeriods.add(reducedPeriod2);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 18
@@ -371,13 +371,12 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 19
     //partition: reducedPeriods == null
-    //expected output: NullPointerException
-    @Test (expected = NullPointerException.class)
+    @Test (expected = IllegalArgumentException.class)
     public void test19() {
         CarParkKind kind = CarParkKind.STAFF;
         BigDecimal normalRate = new BigDecimal("20");
@@ -387,31 +386,22 @@ public class QuinlanRhyderTestTask3 {
         Period normalPeriod1 = new Period(9,13);
         normalPeriods.add(normalPeriod1);
 
-        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
-        Period reducedPeriod1 = null;
-        normalPeriods.add(reducedPeriod1);
-
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, null, normalPeriods);
     }
 
     //test 20
     //partition: normalPeriods == null
-    //expected output: NullPointerException
-    @Test (expected = NullPointerException.class)
+    @Test (expected = IllegalArgumentException.class)
     public void test20() {
         CarParkKind kind = CarParkKind.STAFF;
         BigDecimal normalRate = new BigDecimal("20");
         BigDecimal reducedRate = new BigDecimal("15");
 
-        ArrayList<Period> normalPeriods = new ArrayList<Period>();
-        Period normalPeriod = null;
-        normalPeriods.add(normalPeriod);
-
         ArrayList<Period> reducedPeriods = new ArrayList<Period>();
         Period reducedPeriod = new Period(17,21);
-        normalPeriods.add(reducedPeriod);
+        reducedPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, null);
     }
 
     //test 21
@@ -431,7 +421,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 22
@@ -451,7 +441,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //test 23
@@ -471,18 +461,17 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     //--- Calculate method ---
 
     //test 24
-    //expected output: pass
     @Test
     public void test24() {
-        CarParkKind kind = CarParkKind.STUDENT;
-        BigDecimal normalRate = new BigDecimal("20");
-        BigDecimal reducedRate = new BigDecimal("15");
+        CarParkKind kind = CarParkKind.STAFF;
+        BigDecimal normalRate = new BigDecimal(2);
+        BigDecimal reducedRate = new BigDecimal(1);
 
         ArrayList<Period> normalPeriods = new ArrayList<Period>();
         Period normalPeriod = new Period(9,17);
@@ -492,14 +481,12 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,21);
         normalPeriods.add(reducedPeriod);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal("17.3750"), rate.calculate(new Period(9,10)));
+        assertEquals(new BigDecimal("2"), rate.calculate(new Period(9,10)));
     }
 
     //test 25
-    //expected output: 20
-    //actual output: 15
     @Test
     public void test25() {
         CarParkKind kind = CarParkKind.STUDENT;
@@ -578,7 +565,7 @@ public class QuinlanRhyderTestTask3 {
 
         ArrayList<Period> reducedPeriods = null;
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     @Test (expected = IllegalArgumentException.class)
@@ -599,7 +586,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod2 = new Period(18,21);
         reducedPeriods.add(reducedPeriod2);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     @Test (expected = IllegalArgumentException.class)
@@ -614,7 +601,7 @@ public class QuinlanRhyderTestTask3 {
         Period reducedPeriod = new Period(17,22);
         reducedPeriods.add(reducedPeriod);
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
     @Test (expected = IllegalArgumentException.class)
@@ -639,7 +626,7 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal reducedRate = new BigDecimal(5);
         CarParkKind kind = CarParkKind.STUDENT;
 
-        new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 
 
@@ -665,7 +652,7 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(2);
         BigDecimal reducedRate = new BigDecimal(1);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
         assertEquals(new BigDecimal(0), rate.calculate(new Period(11,12)));
     }
 
@@ -683,11 +670,11 @@ public class QuinlanRhyderTestTask3 {
 
         normalPeriods.add(normalPeriod);
         reducedPeriods.add(reducedPeriod);
-        BigDecimal normalRate = new BigDecimal(9);
-        BigDecimal reducedRate = new BigDecimal(8);
+        BigDecimal normalRate = new BigDecimal(4);
+        BigDecimal reducedRate = new BigDecimal(2);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
-        assertEquals(new BigDecimal(0), rate.calculate(new Period(11,12)));
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+        assertEquals(new BigDecimal(0), rate.calculate(new Period(9,11)));
     }
 
     //kind = visitor
@@ -707,9 +694,9 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(3);
         BigDecimal reducedRate = new BigDecimal(2);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal("5.000"), rate.calculate(new Period(9,17)));
+        assertEquals(new BigDecimal("0.500"), rate.calculate(new Period(9,12)));
     }
 
     //kind = management
@@ -729,7 +716,7 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(2);
         BigDecimal reducedRate = new BigDecimal(1);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
         assertEquals(new BigDecimal("3.00"), rate.calculate(new Period(17,18)));
     }
@@ -751,9 +738,9 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(2);
         BigDecimal reducedRate = new BigDecimal(1);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal(10), rate.calculate(new Period(12,18)));
+        assertEquals(new BigDecimal(5), rate.calculate(new Period(12,18)));
     }
 
     //kind = student
@@ -770,13 +757,13 @@ public class QuinlanRhyderTestTask3 {
 
         normalPeriods.add(normalPeriod);
         reducedPeriods.add(reducedPeriod);
-        BigDecimal normalRate = new BigDecimal(2);
-        BigDecimal reducedRate = new BigDecimal(1);
+        BigDecimal normalRate = new BigDecimal(3);
+        BigDecimal reducedRate = new BigDecimal(2);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
 
-        assertEquals(new BigDecimal("6.1250"), rate.calculate(new Period(15,18)));
+        assertEquals(new BigDecimal("8.6250"), rate.calculate(new Period(12,17)));
     }
 
     //kind = student
@@ -796,9 +783,9 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(2);
         BigDecimal reducedRate = new BigDecimal(1);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-        assertEquals(new BigDecimal(2), rate.calculate(new Period(17,18)));
+        assertEquals(new BigDecimal(2), rate.calculate(new Period(9,10)));
     }
 
     //kind = staff
@@ -817,7 +804,7 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(3);
         BigDecimal reducedRate = new BigDecimal(2);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
         assertEquals(new BigDecimal("16.00"), rate.calculate(new Period(9,18)));
     }
@@ -838,7 +825,7 @@ public class QuinlanRhyderTestTask3 {
         BigDecimal normalRate = new BigDecimal(3);
         BigDecimal reducedRate = new BigDecimal(2);
 
-        Rate rate = new Rate(kind, normalRate, reducedRate, normalPeriods, reducedPeriods);
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
         if(rate.calculate(new Period(15,18)).compareTo(new BigDecimal("16.00")) == 1){
             throw new IllegalArgumentException(); //period calculation is not less than or equal to 16 so throw exception
@@ -886,5 +873,47 @@ public class QuinlanRhyderTestTask3 {
         reducedPeriods.add(reducedPeriod2);
 
         new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+    }
+
+    //BUG - if periodStay == null should through IllegalArgumentException but throws NullPointerException
+    //calculate input == null
+    @Test (expected = IllegalArgumentException.class)
+    public void test43() {
+        CarParkKind kind = CarParkKind.STUDENT;
+        BigDecimal normalRate = new BigDecimal("20");
+        BigDecimal reducedRate = new BigDecimal("15");
+
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        Period normalPeriod = new Period(9,17);
+        normalPeriods.add(normalPeriod);
+
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        Period reducedPeriod = new Period(17,21);
+        normalPeriods.add(reducedPeriod);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
+        rate.calculate(null);
+    }
+
+    //BUG
+    //when normalRate and reducedRate are equal to eachother should not throw exception
+    //according to specification
+
+    //made changes to Rate class to fix this error
+    @Test
+    public void test44() {
+        CarParkKind kind = CarParkKind.STUDENT;
+        BigDecimal normalRate = new BigDecimal("20");
+        BigDecimal reducedRate = new BigDecimal("20");
+
+        ArrayList<Period> normalPeriods = new ArrayList<Period>();
+        Period normalPeriod = new Period(9,12);
+        normalPeriods.add(normalPeriod);
+
+        ArrayList<Period> reducedPeriods = new ArrayList<Period>();
+        Period reducedPeriod = new Period(13,21);
+        normalPeriods.add(reducedPeriod);
+
+        Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
     }
 }
