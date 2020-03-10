@@ -757,13 +757,13 @@ public class QuinlanRhyderTestTask3 {
 
         normalPeriods.add(normalPeriod);
         reducedPeriods.add(reducedPeriod);
-        BigDecimal normalRate = new BigDecimal(3);
-        BigDecimal reducedRate = new BigDecimal(2);
+        BigDecimal normalRate = new BigDecimal(4);
+        BigDecimal reducedRate = new BigDecimal(3);
 
         Rate rate = new Rate(kind, normalRate, reducedRate, reducedPeriods, normalPeriods);
 
-
-        assertEquals(new BigDecimal("8.6250"), rate.calculate(new Period(12,17)));
+        System.out.println(rate.calculate(new Period(15,17)));
+        assertEquals(new BigDecimal("6.1250"), rate.calculate(new Period(15,17)));
     }
 
     //kind = student
