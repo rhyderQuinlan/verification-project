@@ -92,6 +92,10 @@ public class Rate {
     }
 
     public BigDecimal calculate(Period periodStay) {
+        //instantiate Icalculate instance
+        //STRATEGY PATTERN
+        Icalculate calculateInstance;
+
         //bug fix 1
         if(periodStay == null){
             throw new IllegalArgumentException();
@@ -104,20 +108,20 @@ public class Rate {
 
         switch (this.kind){
             case STAFF:
-                Icalculate staffCalc = new StaffRate();
-                calculation = staffCalc.calculate((calculation));
+                calculateInstance = new StaffRate();
+                calculation = calculateInstance.calculate((calculation));
                 break;
             case MANAGEMENT:
-                Icalculate managementCalc = new ManagementRate();
-                calculation = managementCalc.calculate(calculation);
+                calculateInstance = new ManagementRate();
+                calculation = calculateInstance.calculate(calculation);
                 break;
             case STUDENT:
-                Icalculate studentCalc = new StudentRate();
-                calculation = studentCalc.calculate(calculation);
+                calculateInstance = new StudentRate();
+                calculation = calculateInstance.calculate(calculation);
                 break;
             case VISITOR:
-                Icalculate visitorCalc = new VisitorRate();
-                calculation = visitorCalc.calculate(calculation);
+                calculateInstance = new VisitorRate();
+                calculation = calculateInstance.calculate(calculation);
         }
 
         return calculation;
