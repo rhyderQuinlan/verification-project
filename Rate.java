@@ -11,10 +11,6 @@ public class Rate {
     private BigDecimal hourlyReducedRate;
     private ArrayList<Period> reduced = new ArrayList<>();
     private ArrayList<Period> normal = new ArrayList<>();
-    private Icalculate staffCalc = new StaffRate();
-    private Icalculate managmentCalc = new ManagementRate();
-    private Icalculate studentCalc = new StudentRate();
-    private Icalculate visitorCalc = new VisitorRate();
 
 
     public Rate(CarParkKind kind, BigDecimal normalRate, BigDecimal reducedRate, ArrayList<Period> reducedPeriods
@@ -108,15 +104,19 @@ public class Rate {
 
         switch (this.kind){
             case STAFF:
-                calculation = staffCalc.calculate(calculation);
+                Icalculate staffCalc = new StaffRate();
+                calculation = staffCalc.calculate((calculation));
                 break;
             case MANAGEMENT:
-                calculation = managmentCalc.calculate(calculation);
+                Icalculate managementCalc = new ManagementRate();
+                calculation = managementCalc.calculate(calculation);
                 break;
             case STUDENT:
+                Icalculate studentCalc = new StudentRate();
                 calculation = studentCalc.calculate(calculation);
                 break;
             case VISITOR:
+                Icalculate visitorCalc = new VisitorRate();
                 calculation = visitorCalc.calculate(calculation);
         }
 
